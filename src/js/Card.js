@@ -28,9 +28,9 @@ export default class Card extends EventEmitter {
 
   render() {
     const template = `
-<div class="card type-${this._type}${classNames({
+<div class='${classNames(`card`,`type-${this._type}`,{
       "is-danger": this._type === Card.types.HAWAIIAN,
-    })}">
+    })}'>
   <div class="emoji">🍕</div>
   <span class="type">${this._type}</span>
 </div>
